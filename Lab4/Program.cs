@@ -52,5 +52,30 @@ namespace Lab4
             Console.WriteLine("Press any key to close the application");
             Console.ReadKey();
         }
+        public static void login3Attempts()
+        {
+            int wrongInput=0;
+            Boolean goodCombo = false;
+            {
+                while (wrongInput <= 2 & !goodCombo )
+                    Console.WriteLine("enter a username");
+                String userid = Console.ReadLine();
+                Console.WriteLine("enter a password");
+                String password = Console.ReadLine();
+                if (userid.Equals("Ravivos21") & password.Equals("12345"))
+                    goodCombo = true;
+                if (!goodCombo)
+                    wrongInput++;
+
+            }
+            if (!goodCombo)
+                Console.WriteLine("not good combo");
+            else
+                Console.WriteLine("Hi Raviv");
+
+        }
+
+
+
     }
 }
